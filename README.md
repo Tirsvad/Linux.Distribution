@@ -1,0 +1,8 @@
+# Tirsvad CLI - Distribution
+
+Get distribution information from linux systems
+
+A C# Library
+
+## How to use
+
