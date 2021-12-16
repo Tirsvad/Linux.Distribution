@@ -6,3 +6,9 @@ A C# Library
 
 ## How to use
 
+    ...
+    using TirsvadCLI.Linux;
+    ...
+    string distibutionversion = Distribution.distributionVersion;
+    string distibutionname = Distribution.distributionName;
+    ...

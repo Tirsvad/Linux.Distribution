@@ -14,7 +14,8 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/TirsvadCLI/Linux.Distribution.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <!-- <ProjectUrl>https://www.tirsvad-cms.dk/</ProjectUrl> -->
+    <ProjectUrl>https://www.tirsvad-cms.dk/</ProjectUrl>
+    <PackageIcon>images/tirsvadcms_logo.png</PackageIcon>
 
     <PackageTags>Linux</PackageTags>
     <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
@@ -39,6 +40,7 @@
 
   <ItemGroup>
       <None Include="../../LICENSE" Pack="true" PackagePath=""/>
+      <None Include="../../tirsvadcms_logo.png" Pack="true" Visible="false" PackagePath="images/tirsvadcms_logo.png" />
   </ItemGroup>
 
 </Project>

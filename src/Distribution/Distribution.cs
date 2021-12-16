@@ -1,30 +1,31 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace TirsvadCLI.Linux;
-public sealed class Distribution
+namespace TirsvadCLI.Linux
 {
-    public string distributionName { get; set; } = "";
-    public string distributionVersion { get; set; } = "";
-
-    public Distribution()
+    public class Distribution
     {
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+        public static string distributionName { get; } = "";
+        public static string distributionVersion { get; } = "";
+
+        static Distribution()
         {
-            /*
-                Get linux distrobution and version
-            */
-            foreach (string line in File.ReadAllLines("/etc/os-release"))
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                if (line.StartsWith("NAME"))
+                /*
+                    Get linux distrobution and version
+                */
+                foreach (string line in File.ReadAllLines("/etc/os-release"))
                 {
-                    this.distributionName = line.Substring(5).Trim('"');
-                }
-                if (line.StartsWith("VERSION_ID"))
-                {
-                    this.distributionVersion = line.Substring(11).Trim('"');
+                    if (line.StartsWith("NAME"))
+                    {
+                        distributionName = line.Substring(5).Trim('"');
+                    }
+                    if (line.StartsWith("VERSION_ID"))
+                    {
+                        distributionVersion = line.Substring(11).Trim('"');
+                    }
                 }
             }
         }
     }
-
 }
