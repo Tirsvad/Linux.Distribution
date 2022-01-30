@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <Copyright>Copyright © TirsvadCLI 2021</Copyright>
     <Authors>Jens Tirsvad Nielsen</Authors>
     <Company>TirsvadCLI</Company>
-    <VersionPrefix>0.1.0.0</VersionPrefix>
+    <VersionPrefix>0.1.0.1</VersionPrefix>
     <AssemblyVersion>$(VersionPrefix + VersionSuffix)</AssemblyVersion>
     <Version>$(VersionPrefix + VersionSuffix)</Version>
     <PackageId>TirsvadCLI.Linux.Distribution</PackageId>
@@ -16,31 +15,24 @@
     <RepositoryType>git</RepositoryType>
     <ProjectUrl>https://www.tirsvad-cms.dk/</ProjectUrl>
     <PackageIcon>images/tirsvadcms_logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
 
     <PackageTags>Linux</PackageTags>
-    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
-
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-
     <OutputType>library</OutputType>
-
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)' == 'Beta' ">
-    <VersionSuffix>beta-$([System.DateTime]::Now.ToString(&quot;yyyyMMddHHmm&quot;))</VersionSuffix>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)' == 'Alpha' ">
-    <VersionSuffix>alpha-$([System.DateTime]::Now.ToString(&quot;yyyyMMddHHmm&quot;))</VersionSuffix>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-      <None Include="../../LICENSE" Pack="true" PackagePath=""/>
+      <None Include="../../LICENSE" Pack="true" PackagePath="" />
       <None Include="../../tirsvadcms_logo.png" Pack="true" Visible="false" PackagePath="images/tirsvadcms_logo.png" />
+      <None Include="../../README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
