@@ -3,7 +3,7 @@
     <Copyright>Copyright © TirsvadCLI 2021</Copyright>
     <Authors>Jens Tirsvad Nielsen</Authors>
     <Company>TirsvadCLI</Company>
-    <VersionPrefix>0.1.2.0</VersionPrefix>
+    <VersionPrefix>0.1.2.1</VersionPrefix>
     <AssemblyVersion>$(VersionPrefix + VersionSuffix)</AssemblyVersion>
     <Version>$(VersionPrefix + VersionSuffix)</Version>
     <PackageId>TirsvadCLI.Linux.Distribution</PackageId>
