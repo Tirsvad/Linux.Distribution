@@ -3,8 +3,8 @@
 namespace TirsvadCLI.Linux.Distribution;
 public class Distribution
 {
-    public static string distributionName { get; } = "";
-    public static string distributionVersion { get; }  = "";
+    public static string DistributionName { get; } = "";
+    public static string DistributionVersion { get; }  = "";
 
     static Distribution()
     {
@@ -17,11 +17,11 @@ public class Distribution
             {
                 if (line.StartsWith("NAME"))
                 {
-                    distributionName = line.Substring(5).Trim('"');
+                    DistributionName = line.Substring(5).Trim('"');
                 }
                 if (line.StartsWith("VERSION_ID"))
                 {
-                    distributionVersion = line.Substring(11).Trim('"');
+                    DistributionVersion = line.Substring(11).Trim('"');
                 }
             }
         }

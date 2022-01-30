@@ -10,11 +10,11 @@ public class ConstShouldBe
     [Fact]
     public void CatchEmptyDistributionName()
     {
-        Assert.NotEmpty(Distribution.distributionName);
+        Assert.NotEmpty(Distribution.DistributionName);
     }
     [Fact]
     public void CatchNullDistributionVersion()
     {
-        Assert.NotNull(Distribution.distributionVersion);
+        Assert.NotNull(Distribution.DistributionVersion);
     }
 }
