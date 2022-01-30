@@ -3,7 +3,7 @@
     <Copyright>Copyright © TirsvadCLI 2021</Copyright>
     <Authors>Jens Tirsvad Nielsen</Authors>
     <Company>TirsvadCLI</Company>
-    <VersionPrefix>0.1.1.0</VersionPrefix>
+    <VersionPrefix>0.1.2.0</VersionPrefix>
     <AssemblyVersion>$(VersionPrefix + VersionSuffix)</AssemblyVersion>
     <Version>$(VersionPrefix + VersionSuffix)</Version>
     <PackageId>TirsvadCLI.Linux.Distribution</PackageId>
@@ -19,7 +19,6 @@
 
     <PackageTags>Linux</PackageTags>
     <OutputType>library</OutputType>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
   </PropertyGroup>
 
@@ -27,6 +26,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>

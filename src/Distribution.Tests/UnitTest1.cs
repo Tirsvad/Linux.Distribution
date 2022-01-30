@@ -1,19 +1,16 @@
-using System;
 using Xunit;
 
-using TirsvadCLI.Linux.Distribution;
-
-namespace TirsvadCLI.Linux.Distribution.Tests;
+namespace TirsvadCLI.Linux.Tests;
 
 public class ConstShouldBe
 {
     [Fact]
-    public void CatchEmptyDistributionName()
+    public void Catch_Empty_DistributionName()
     {
         Assert.NotEmpty(Distribution.DistributionName);
     }
     [Fact]
-    public void CatchNullDistributionVersion()
+    public void Catch_Null_DistributionVersion()
     {
         Assert.NotNull(Distribution.DistributionVersion);
     }

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace TirsvadCLI.Linux.Distribution;
+namespace TirsvadCLI.Linux;
 public class Distribution
 {
     public static string DistributionName { get; } = "";
