@@ -1,6 +1,7 @@
 using Xunit;
+using TirsvadCLI.Linux;
 
-namespace TirsvadCLI.Linux.Tests;
+namespace XUnit.Project;
 
 public class ConstShouldBe
 {
