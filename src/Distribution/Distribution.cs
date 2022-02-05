@@ -1,7 +1,8 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 
 namespace TirsvadCLI.Linux;
-public class Distribution
+public static class Distribution
 {
     public static string DistributionName { get; } = "";
     public static string DistributionVersion { get; }  = "";

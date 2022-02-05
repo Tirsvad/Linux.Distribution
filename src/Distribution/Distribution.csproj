@@ -3,9 +3,12 @@
     <Copyright>Copyright © TirsvadCLI 2021</Copyright>
     <Authors>Jens Tirsvad Nielsen</Authors>
     <Company>TirsvadCLI</Company>
-    <VersionPrefix>0.1.2.1</VersionPrefix>
-    <AssemblyVersion>$(VersionPrefix + VersionSuffix)</AssemblyVersion>
-    <Version>$(VersionPrefix + VersionSuffix)</Version>
+    <VersionPrefix>0.1.3</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+    <Version Condition=" '$(VersionSuffix)' != '' ">$(VersionPrefix)-$(VersionSuffix)</Version>
+    <Version Condition=" '$(Version)' == '' ">$(VersionPrefix)</Version>
+    <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+    <InformationalVersion>This is a prerelease package</InformationalVersion>
     <PackageId>TirsvadCLI.Linux.Distribution</PackageId>
     <Description>
       Library that get linux distribution name and version.
@@ -28,7 +31,6 @@
     <Nullable>enable</Nullable>
 
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
@@ -40,7 +42,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+    <SourceRoot Include="../../"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
