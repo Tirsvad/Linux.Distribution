@@ -1,3 +1,4 @@
+![Foo](/logo.png)
 # Tirsvad CLI - Distribution
 
 Get distribution information from linux systems
