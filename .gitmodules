@@ -1,0 +1,3 @@
+[submodule "src/Distribution.Tests/vendor"]
+	path = src/Distribution.Tests/vendor
+	url = https://github.com/TirsvadCLI/Linux.DebianIsoWithPreseed
